@@ -17,7 +17,7 @@ select opt in "${options[@]}"; do
         "Install environment")
             eval "$($HOME/miniconda/bin/conda shell.bash hook)"
             conda activate base && conda info --envs
-            conda env create -f ./src/main/python/environment.yml
+            conda env create -f ./scripts/local/environment.yml
             conda activate twitter_env && conda info --envs
             break
             ;;
