@@ -1,1 +1,5 @@
 # twitter
+
+```bash
+make info
+```
