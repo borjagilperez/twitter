@@ -40,6 +40,12 @@ select opt in "${options[@]}"; do
                     git restore ./VERSION
                     git flow $BRANCH start v$NEW_VERSION
                     bumpversion --current-version $CURR_VERSION $NAME ./VERSION
+
+                    CWD=$(pwd)
+                    cd ./src/main/python
+                    bumpversion --allow-dirty --current-version $CURR_VERSION $NAME ./setup.py ./mytwitter/__init__.py
+                    cd $CWD
+
                     git add --all && git commit -m "refactor: repo version $NEW_VERSION"
                     ;;
                 'n'|'N'|"")
