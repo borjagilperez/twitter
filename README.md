@@ -9,3 +9,9 @@ make info
 ```bash
 ./src/main/python
 ```
+
+## Python launchers
+
+```bash
+./scripts/twitter/launchers
+```
