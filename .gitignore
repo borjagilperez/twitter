@@ -1,3 +1,7 @@
+# ======
+# Python
+# ======
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -76,6 +80,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+metastore_db/
 
 # IPython
 profile_default/
@@ -116,6 +121,9 @@ venv.bak/
 
 # Rope project settings
 .ropeproject
+
+# PyCharm project settings
+.idea
 
 # mkdocs documentation
 /site
