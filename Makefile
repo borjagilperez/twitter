@@ -1,18 +1,21 @@
-LOCAL = package
-GIT = git
-.PHONY: all info $(LOCAL) $(GIT)
-
+# $ make
+# $ make all
 all: info
 
+LOCAL = package
+GIT = git
+.PHONY: info $(LOCAL) $(GIT)
+
+# $ make info
 info:
 	@echo "LOCAL: $(LOCAL)"
 	@echo "GIT: $(GIT)"
 
-# LOCAL
+# $ make package
 package:
 	@bash ./scripts/local/package.sh
 
-# GIT
+# $ make git
 git:
 	@bash ./scripts/git.sh
 	
