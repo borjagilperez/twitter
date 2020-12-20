@@ -7,4 +7,5 @@ dependencies:
   - pip
   - pylint
   - spyder
-  
+  - pip:
+    - -r ./requirements.txt

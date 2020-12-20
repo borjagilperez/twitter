@@ -25,7 +25,7 @@ with open("./README.md", "r") as f:
 
 setuptools.setup(
     name="mytwitter",
-    version="0.1.1",
+    version="0.1.2",
     author="Borja Gil Pérez",
     author_email="borjagilperez@outlook.com",
     classifiers=[

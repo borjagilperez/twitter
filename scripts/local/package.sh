@@ -12,7 +12,7 @@ options=(
     "Install package" \
     "View installation" \
     "Open Spyder" \
-    "Start notebook" \
+    "Start Jupyter notebook" \
     "Quit")
 
 select opt in "${options[@]}"; do
@@ -20,7 +20,7 @@ select opt in "${options[@]}"; do
         "Install twitter_env")
             eval "$($HOME/miniconda/bin/conda shell.bash hook)"
             conda activate base && conda info --envs
-            conda env create -f ./scripts/local/environment.yml
+            conda env create -f ./src/main/python/environment.yml
             conda activate twitter_env && conda info --envs
             break
             ;;
@@ -29,7 +29,7 @@ select opt in "${options[@]}"; do
             eval "$($HOME/miniconda/bin/conda shell.bash hook)"
             conda activate base && conda info --envs
             conda remove -y -n twitter_env --all
-            conda env create -f ./scripts/local/environment.yml
+            conda env create -f ./src/main/python/environment.yml
             break
             ;;
 
@@ -101,7 +101,7 @@ select opt in "${options[@]}"; do
             break
             ;;
 
-        "Start notebook")
+        "Start Jupyter notebook")
             eval "$($HOME/miniconda/bin/conda shell.bash hook)"
             conda activate twitter_env && conda info --envs
             cd $HOME
